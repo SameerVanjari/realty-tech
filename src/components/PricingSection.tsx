@@ -126,7 +126,7 @@ export default function PricingSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 items-start justify-center">
                 {currentPlans.map((plan, index) => (
                     <div key={index} className={`pricing-card ${isFlipping ? 'flip' : ''} min-h-[500px]`}>
-                        <div className="pricing-content flex flex-col gap-6 p-8 rounded-xl bg-card-light dark:bg-card-dark shadow-lg border border-transparent h-full">
+                        <div className={`pricing-content flex flex-col gap-6 p-8 rounded-xl bg-card-light dark:bg-card-dark shadow-lg border h-full ${plan.title.includes('Pro') ? 'border-accent-gold' : 'border-transparent'}`}>
                             <div className="relative">
                                 <h3 className="text-xl font-bold font-heading text-gray-900 dark:text-white">{plan.title}</h3>
                             </div>
@@ -143,9 +143,10 @@ export default function PricingSection() {
                                     </li>
                                 ))}
                             </ul>
-                            <button className={`w-full mt-4 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 text-base font-bold tracking-wide transition-transform ${plan.buttonClass}`}>
+                            <div className='h-6'></div>
+                            {/* <button className={`w-full mt-4 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 text-base font-bold tracking-wide transition-transform ${plan.buttonClass}`}>
                                 {plan.buttonText}
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 ))}

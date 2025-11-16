@@ -6,16 +6,16 @@ export default function CTASection() {
                 <p className="max-w-xl text-gray-600 dark:text-gray-300">
                     Join the top agents using RealtyTech to sell properties faster. Schedule a call or register to get started today.
                 </p>
-                <form className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md mt-4">
-                    <input className="w-full h-12 px-4 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-accent-teal focus:border-accent-teal" placeholder="Enter your email address" type="email" />
+                <div className="flex flex-col items-center gap-4 mt-4">
+                    <p className="text-lg font-semibold text-accent-teal">Get started today!</p>
                     <button
                         onClick={() => window.open('https://calendly.com/ssv6132/30min', '_blank')}
-                        className="w-full sm:w-auto flex-shrink-0 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105"
+                        className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105"
                         type="button"
                     >
                         <span className="truncate">Book a Call</span>
                     </button>
-                </form>
+                </div>
             </div>
         </section>
     )
