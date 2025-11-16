@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RealtyTech - AI-Powered Real Estate Marketing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00C4CC",
+            "background-light": "#f5f8f8",
+            "background-dark": "#0f2223",
+            "deep-navy": "#0D1B2A",
+            "accent-teal": "#00C4CC",
+            "light-neutral": "#F9FAFB",
+            "accent-gold": "#FFD166",
+            "card-dark": "#173536",
+            "card-light": "#FFFFFF"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "heading": ["Montserrat", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .glassmorphic {
+      background: rgba(23, 53, 54, 0.6);backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .dark .glassmorphic {
+      background: rgba(23, 53, 54, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .light .glassmorphic {
+      background: rgba(255, 255, 255, 0.6);border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative w-full overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-center py-3 px-4 md:px-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200/20 dark:border-white/10 transition-colors duration-300">
+<nav class="flex items-center justify-between w-full max-w-6xl">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-accent-teal">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold font-heading text-gray-900 dark:text-white">RealtyTech</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-accent-teal transition-colors text-gray-700 dark:text-gray-300" href="#features">Features</a>
+<a class="text-sm font-medium hover:text-accent-teal transition-colors text-gray-700 dark:text-gray-300" href="#pricing">Pricing</a>
+<a class="text-sm font-medium hover:text-accent-teal transition-colors text-gray-700 dark:text-gray-300" href="#gallery-showcase">Gallery</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent-teal text-deep-navy text-sm font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Book a Call</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="flex flex-col items-center">
+<section class="w-full max-w-6xl py-24 px-4 md:px-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8 text-center lg:text-left">
+<div class="flex flex-col gap-4">
+<h1 class="font-heading text-4xl md:text-6xl font-bold tracking-tighter text-gray-900 dark:text-white">
+                Revolutionize Real Estate Marketing with AI
+              </h1>
+<h2 class="text-lg md:text-xl text-gray-600 dark:text-gray-300">
+                Create stunning 3D property galleries and generate AI-powered video ads in minutes.
+              </h2>
+</div>
+<div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105" href="#gallery-showcase">
+<span class="truncate">Explore Galleries</span>
+</a>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gray-200 dark:bg-card-dark text-gray-800 dark:text-white text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Book a Call</span>
+</button>
+</div>
+</div>
+<div class="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-xl" data-alt="Abstract 3D rendering of a modern architectural interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBg4e5usKVzgVSKeE-NX91WfRSYsTI4mfvHY7J3Au6BMloIbdfx-2jzB83u01Xrwf2a0D8e-SbZ6-bKtZ2Qivg2wyNL06JRUsl4b6yF3rvngssUIUCnKIuS6aDZ3zz7wa7A9l3vsabp0LaVOHXnWU747F3WtjdLU-7_9JL7SMq0rMZJJkgdbMQF5cf5gMlN_C1PpldWeT8bjvXquQX7dH5XHWDvngt1zjvGYY02euQsLy3X_wnudFgcL5c-bnelkN4xszjiscpq4kY");'></div>
+</div>
+</section>
+<section class="w-full max-w-6xl py-24 px-4 md:px-10" id="features">
+<div class="flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-gray-900 dark:text-white">How It Works</h2>
+<p class="text-center max-w-2xl text-gray-600 dark:text-gray-300">Our process is simple and designed to deliver stunning results with minimal effort. Go from property scan to market-ready assets in just three steps.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+<div class="flex flex-col gap-4 p-8 rounded-xl bg-card-light dark:bg-card-dark shadow-lg">
+<div class="flex items-center gap-4">
+<span class="text-3xl font-bold font-heading text-accent-teal">1</span>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Scan Your Property</h3>
+</div>
+<p class="text-gray-600 dark:text-gray-300">Easily capture your space using our intuitive technology. Our app guides you through a quick and seamless scanning process.</p>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-xl bg-card-light dark:bg-card-dark shadow-lg">
+<div class="flex items-center gap-4">
+<span class="text-3xl font-bold font-heading text-accent-teal">2</span>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">AI Generates</h3>
+</div>
+<p class="text-gray-600 dark:text-gray-300">Our powerful AI processes the scan data to automatically build a high-fidelity 3D gallery and create engaging video ads.</p>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-xl bg-card-light dark:bg-card-dark shadow-lg">
+<div class="flex items-center gap-4">
+<span class="text-3xl font-bold font-heading text-accent-teal">3</span>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Publish &amp; Market</h3>
+</div>
+<p class="text-gray-600 dark:text-gray-300">Instantly share your new assets across all platforms to attract more buyers and sell properties faster than ever before.</p>
+</div>
+</div>
+</section>
+<section class="w-full py-24 bg-gradient-to-b from-white/5 to-transparent dark:from-card-dark/20 dark:to-transparent" id="gallery-showcase">
+<div class="max-w-6xl mx-auto px-4 md:px-10">
+<div class="flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-gray-900 dark:text-white">See What’s Possible</h2>
+<p class="text-center max-w-2xl text-gray-600 dark:text-gray-300">Explore our portfolio of interactive 3D galleries. Click on any property to experience the future of listings.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mt-12">
+<div class="md:col-span-8 h-96 group relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern home exterior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAr4r2PPPjn7PdVmok7_hx7qeBpXFa1CLfHCpgdgbTo9n7d_Mbr3RZZxrqI3F33RP6Cjcz5QvqO7K_tQAMNQcMuwOgURg62CN_HWekAEwlAS94i79kbECq0oW4k0f0OQW81KJqlZXoUbG8h4EsPu_gdx_DM_d10xpHyciTC5MXaIdHesanlxK26SDQKmn_9s8U392bq6CoVoYg5R-_dx4nir8DnIp6LPP8C5qnfAhe06jn4FDys3YuckYgS1lpuDjRPONcKrP0JvD4")'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 text-white">
+<h3 class="text-2xl font-bold">Modern Villa</h3>
+<p class="text-sm">Sunnyvale, CA</p>
+</div>
+<div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center gap-2 min-w-[84px] cursor-pointer justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="material-symbols-outlined">view_in_ar</span>
+<span>View Gallery</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-4 h-96 group relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full h-full bg-cover bg-center" data-alt="Bright and airy living room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2jUwa2T7h2BmaAUEGS2IAndz3-G3Zj8dJs0ASELgDFHg9co_Q-KHJeV-8wkA7uqSj33V6gvEYTKxqhTRhs5XdRF1KyVqCKQHyuUlPw4-lqhGSVIeua1YGC-c9Cfh_sbvXCJw-iDh6zU2u2KNw1yPtOYYO3nZfyiU5KdOIUsf1eSzLU-C6Rsr0Ge728HwoyiWd_5Nm2sFAKDjitwqtWmiDqDloa4Yk-Q6i_Vti1mEb6KUZjwNepoIIY4FcQ98C61OUzyd9IE92tCg")'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 text-white">
+<h3 class="text-xl font-bold">Downtown Loft</h3>
+<p class="text-sm">Metropolis, USA</p>
+</div>
+<div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center gap-2 min-w-[84px] cursor-pointer justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="material-symbols-outlined">view_in_ar</span>
+<span>View Gallery</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-4 h-96 group relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full h-full bg-cover bg-center" data-alt="Stylish kitchen with marble countertops" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVUPvUYR1d_ufPD8_5mNI4U8RWDxZAaw9loBzTf6i8c4ad-oii5JeKYYyaiZYuxnOU4s9Prly3C3ghzQkYKrhFNEULdB0rp3dHp5batL0j4fnZiNtJ9JKl8JE0zX3W6dAyFrH3c9sRdUAh2JrRdDaTjn5vlzqwjOjbB1BZ5PDLNxFNQMKuuiLTX0CpjcFBWtZLy_z9EScZlapSO3L8FU512bLkRZDaubFS3K82QrTfNE2ddqRrsl4lonz2FOau-M19DCQx5fUbbGk")'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 text-white">
+<h3 class="text-xl font-bold">Suburban Family Home</h3>
+<p class="text-sm">Greenville, SC</p>
+</div>
+<div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center gap-2 min-w-[84px] cursor-pointer justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="material-symbols-outlined">view_in_ar</span>
+<span>View Gallery</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-8 h-96 group relative rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-1">
+<div class="w-full h-full bg-cover bg-center" data-alt="Luxury Penthouse View" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBg4e5usKVzgVSKeE-NX91WfRSYsTI4mfvHY7J3Au6BMloIbdfx-2jzB83u01Xrwf2a0D8e-SbZ6-bKtZ2Qivg2wyNL06JRUsl4b6yF3rvngssUIUCnKIuS6aDZ3zz7wa7A9l3vsabp0LaVOHXnWU747F3WtjdLU-7_9JL7SMq0rMZJJkgdbMQF5cf5gMlN_C1PpldWeT8bjvXquQX7dH5XHWDvngt1zjvGYY02euQsLy3X_wnudFgcL5c-bnelkN4xszjiscpq4kY")'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 text-white">
+<h3 class="text-2xl font-bold">Luxury Penthouse</h3>
+<p class="text-sm">Skyline City</p>
+</div>
+<div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="flex items-center gap-2 min-w-[84px] cursor-pointer justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="material-symbols-outlined">view_in_ar</span>
+<span>View Gallery</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-gold text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Create My Gallery</span>
+</button>
+</div>
+</div>
+</section>
+<section class="w-full max-w-6xl py-24 px-4 md:px-10">
+<div class="flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-gray-900 dark:text-white">Why It Helps</h2>
+<p class="text-center max-w-2xl text-gray-600 dark:text-gray-300">Leverage cutting-edge technology to gain a competitive edge in the real estate market.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+<div class="flex flex-col items-center text-center gap-4 p-6 rounded-xl bg-card-light dark:bg-card-dark shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-teal/20">
+<span class="material-symbols-outlined text-4xl text-accent-teal">view_in_ar</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Impress Buyers</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300">Impress buyers with immersive 3D walkthroughs.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-4 p-6 rounded-xl bg-card-light dark:bg-card-dark shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-teal/20">
+<span class="material-symbols-outlined text-4xl text-accent-teal">schedule</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Save Time</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300">Save time explaining layouts with interactive tours.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-4 p-6 rounded-xl bg-card-light dark:bg-card-dark shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-teal/20">
+<span class="material-symbols-outlined text-4xl text-accent-teal">star</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Stand Out</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300">Stand out from traditional listings.</p>
+</div>
+<div class="flex flex-col items-center text-center gap-4 p-6 rounded-xl bg-card-light dark:bg-card-dark shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-teal/20">
+<span class="material-symbols-outlined text-4xl text-accent-teal">emoji_events</span>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Win More Deals</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300">Win more deals with a premium visual experience.</p>
+</div>
+</div>
+</section>
+<section class="w-full max-w-6xl py-24 px-4 md:px-10" id="pricing">
+<div class="flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-gray-900 dark:text-white">Simple, Transparent Pricing</h2>
+<p class="text-center max-w-2xl text-gray-600 dark:text-gray-300">Choose the plan that fits your needs. No hidden fees, cancel anytime.</p>
+</div>
+<div class="flex justify-center items-center gap-4 mt-8">
+<span class="font-medium text-accent-teal">One-Time</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent-teal"></div>
+</label>
+<span class="font-medium text-gray-700 dark:text-gray-300">Subscription</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 items-start justify-center">
+<div class="flex flex-col gap-6 p-8 rounded-xl bg-card-light dark:bg-card-dark shadow-lg border border-transparent h-full">
+<div class="relative">
+<h3 class="text-xl font-bold font-heading text-gray-900 dark:text-white">Basic Gallery</h3>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$1099</span>
+<span class="text-lg text-gray-500 line-through">$1499</span>
+</div>
+<p class="text-gray-500 text-sm">One-time payment</p>
+<ul class="flex flex-col gap-3 text-gray-600 dark:text-gray-300 flex-grow">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-teal text-lg mt-0.5">check_circle</span><span>Single Property 3D Gallery</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-teal text-lg mt-0.5">check_circle</span><span>High-Resolution Output</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-teal text-lg mt-0.5">check_circle</span><span>Standard 48-hour Turnaround</span></li>
+</ul>
+<button class="w-full mt-4 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gray-200 dark:bg-card-dark border dark:border-white/20 text-gray-800 dark:text-white text-base font-bold tracking-wide transition-colors hover:bg-gray-300 dark:hover:bg-gray-700">Get Started</button>
+</div>
+<div class="flex flex-col gap-6 p-8 rounded-xl bg-card-light dark:bg-card-dark shadow-2xl border-2 border-accent-gold h-full">
+<h3 class="text-xl font-bold font-heading text-gray-900 dark:text-white">Pro Gallery</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">$2099</span>
+<span class="text-lg text-gray-500 line-through">$2999</span>
+</div>
+<p class="text-gray-500 text-sm">One-time payment</p>
+<ul class="flex flex-col gap-3 text-gray-600 dark:text-gray-300 flex-grow">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-lg mt-0.5">check_circle</span><span>Everything in Basic Gallery</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-lg mt-0.5">check_circle</span><span>AI-Enhanced Virtual Staging</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-lg mt-0.5">check_circle</span><span>Branded Loading Screens</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-gold text-lg mt-0.5">check_circle</span><span>Priority 24-hour Turnaround</span></li>
+</ul>
+<button class="w-full mt-4 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-gold text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105">Get Started</button>
+</div>
+<div class="flex flex-col gap-6 p-8 rounded-xl bg-card-light dark:bg-card-dark shadow-lg border border-transparent h-full">
+<h3 class="text-xl font-bold font-heading text-gray-900 dark:text-white">AI Video Add-On</h3>
+<div class="text-4xl font-bold text-gray-900 dark:text-white">$25<span class="text-base font-medium text-gray-500">/month</span></div>
+<p class="text-gray-500 text-sm">Subscription service</p>
+<ul class="flex flex-col gap-3 text-gray-600 dark:text-gray-300 flex-grow">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-teal text-lg mt-0.5">check_circle</span><span>10 AI Video Ads / month</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-teal text-lg mt-0.5">check_circle</span><span>Vertical &amp; Horizontal Formats</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-teal text-lg mt-0.5">check_circle</span><span>Licensed Music Included</span></li>
+</ul>
+<button class="w-full mt-4 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105">Subscribe Now</button>
+</div>
+</div>
+</section>
+<section class="w-full max-w-6xl py-24 px-4 md:px-10">
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-lg p-8 md:p-16 flex flex-col items-center text-center gap-6">
+<h2 class="text-3xl md:text-4xl font-bold font-heading text-gray-900 dark:text-white">Ready to Elevate Your Listings?</h2>
+<p class="max-w-xl text-gray-600 dark:text-gray-300">
+            Join the top agents using RealtyTech to sell properties faster. Schedule a call or register to get started today.
+          </p>
+<form class="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md mt-4">
+<input class="w-full h-12 px-4 rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-accent-teal focus:border-accent-teal" placeholder="Enter your email address" type="email"/>
+<button class="w-full sm:w-auto flex-shrink-0 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105" type="submit">
+<span class="truncate">Book a Call</span>
+</button>
+</form>
+</div>
+</section>
+</main>
+<footer class="w-full bg-deep-navy text-white py-16 px-4 md:px-10">
+<div class="w-full max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="size-6 text-accent-teal">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold font-heading">RealtyTech</h2>
+</div>
+<p class="text-sm text-gray-400">The future of real estate marketing, powered by AI.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold">Company</h4>
+<a class="text-sm text-gray-300 hover:text-accent-teal" href="#">About Us</a>
+<a class="text-sm text-gray-300 hover:text-accent-teal" href="#">Careers</a>
+<a class="text-sm text-gray-300 hover:text-accent-teal" href="#">Blog</a>
+<a class="text-sm text-gray-300 hover:text-accent-teal" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold">Legal</h4>
+<a class="text-sm text-gray-300 hover:text-accent-teal" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-300 hover:text-accent-teal" href="#">Terms of Service</a>
+<a class="text-sm text-gray-300 hover:text-accent-teal" href="#">Cookie Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold">Follow Us</h4>
+<div class="flex items-center gap-4">
+<a class="text-gray-300 hover:text-accent-teal" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-gray-300 hover:text-accent-teal" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a class="text-gray-300 hover:text-accent-teal" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-3.096 0 1.548 1.548 0 013.096 0zM6.55 8.024H3.456v8.59h3.094v-8.59zM18 1H6a5 5 0 00-5 5v12a5 5 0 005 5h12a5 5 0 005-5V6a5 5 0 00-5-5z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+        © 2024 RealtyTech. All Rights Reserved.
+      </div>
+</footer>
+</div>
+</body></html>

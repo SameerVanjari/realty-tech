@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00C4CC;
+  --color-background-light: #f5f8f8;
+  --color-background-dark: #0f2223;
+  --color-deep-navy: #0D1B2A;
+  --color-accent-teal: #00C4CC;
+  --color-light-neutral: #F9FAFB;
+  --color-accent-gold: #FFD166;
+  --color-card-dark: #173536;
+  --color-card-light: #FFFFFF;
+
+  --font-family-display: Inter, sans-serif;
+  --font-family-heading: Montserrat, sans-serif;
+
+  --border-radius: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-full: 9999px;
+}
+
+body {
+  @apply m-0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.glassmorphic {
+  background: rgba(23, 53, 54, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glassmorphic {
+  background: rgba(23, 53, 54, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light .glassmorphic {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.pricing-card.flip {
+  animation: flipCard 0.6s ease-in-out;
+}
+
+@keyframes flipCard {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.pricing-card .pricing-content>* {
+  opacity: 0;
+  animation: fadeInLine 0.6s ease-out forwards;
+}
+
+.pricing-card .pricing-content>*:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.pricing-card .pricing-content>*:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.pricing-card .pricing-content>*:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.pricing-card .pricing-content>*:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.pricing-card .pricing-content>*:nth-child(5) {
+  animation-delay: 0.7s;
+}
+
+.pricing-card.flip .pricing-content>* {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInLine {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
