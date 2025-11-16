@@ -15,7 +15,10 @@ export default function HeroSection() {
                         <a className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent-teal text-deep-navy text-base font-bold tracking-wide transition-transform hover:scale-105" href="#gallery-showcase">
                             <span className="truncate">Explore Galleries</span>
                         </a>
-                        <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gray-200 dark:bg-card-dark text-gray-800 dark:text-white text-base font-bold tracking-wide transition-transform hover:scale-105">
+                        <button
+                            onClick={() => window.open('https://calendly.com/ssv6132/30min', '_blank')}
+                            className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gray-200 dark:bg-card-dark text-gray-800 dark:text-white text-base font-bold tracking-wide transition-transform hover:scale-105"
+                        >
                             <span className="truncate">Book a Call</span>
                         </button>
                     </div>

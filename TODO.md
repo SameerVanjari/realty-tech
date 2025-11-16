@@ -1,12 +1,8 @@
-# TODO: Update Pricing Section with Toggleable Objects and Flip Animations
+# TODO: Add Lightbox Image Viewer to Gallery
 
-- [x] Create pricing data objects in PricingSection.tsx for one-time and subscription plans
-- [x] Update component rendering logic to conditionally display data based on isSubscription state
-- [x] Add flip class logic to trigger animations on toggle change
-- [x] Wrap each pricing card in a div with perspective for 3D flip effect
-- [x] Add CSS for flip animation in styles.css
-- [x] Test toggle functionality and animations
-- [x] Ensure animations work on different screen sizes
-- [x] Add fade-in animation for text elements in pricing cards
-- [x] Ensure consistent card heights across toggle states
-- [x] Implement line-by-line fade-in animation for text elements
+- [ ] Add state management for lightbox modal (selected property, current image index, modal open/close)
+- [ ] Define multiple images per property (using placeholders or variations of existing URLs)
+- [ ] Implement lightbox modal JSX with overlay, image display, navigation buttons (prev/next), and close button
+- [ ] Add click handler to "View Gallery" buttons to open lightbox with first image of selected property
+- [ ] Add keyboard navigation (arrow keys for prev/next, escape to close)
+- [ ] Test lightbox functionality (open, navigate, close)

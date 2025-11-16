@@ -3,13 +3,14 @@ import { useState } from 'react'
 const oneTimePlans = [
     {
         title: 'Basic Gallery',
-        price: '$1099',
+        price: '$899',
         originalPrice: '$1499',
         description: 'One-time payment',
         features: [
             'Single Property 3D Gallery',
             'High-Resolution Output',
-            'Standard 48-hour Turnaround'
+            'Standard 48-hour Turnaround',
+            'Hosting for 3 months'
         ],
         buttonText: 'Get Started',
         buttonClass: 'bg-gray-200 dark:bg-card-dark border dark:border-white/20 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700',
@@ -49,14 +50,14 @@ const oneTimePlans = [
 const subscriptionPlans = [
     {
         title: 'Basic Gallery Subscription',
-        price: '$99<span class="text-base font-medium text-gray-500">/month</span>',
+        price: '$69<span class="text-base font-medium text-gray-500">/month</span>',
         originalPrice: null,
         description: 'Monthly subscription',
         features: [
-            'Unlimited Property 3D Galleries',
+            'Single Property 3D Gallery',
             'High-Resolution Output',
             'Priority 24-hour Turnaround',
-            'Monthly Updates'
+            'Hosting included, cancel anytime'
         ],
         buttonText: 'Subscribe',
         buttonClass: 'bg-gray-200 dark:bg-card-dark border dark:border-white/20 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700',
@@ -64,7 +65,7 @@ const subscriptionPlans = [
     },
     {
         title: 'Pro Gallery Subscription',
-        price: '$199<span class="text-base font-medium text-gray-500">/month</span>',
+        price: '$159<span class="text-base font-medium text-gray-500">/month</span>',
         originalPrice: null,
         description: 'Monthly subscription',
         features: [
